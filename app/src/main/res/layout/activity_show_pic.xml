@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShowPicActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/back"
+            android:src="@drawable/back"
+            android:scaleType="fitCenter"
+            android:background="#FFFFFF"
+            android:layout_width="45dp"
+            android:layout_height="30dp"
+            android:layout_margin="15dp"/>
+
+        <ImageView
+            android:id="@+id/pic"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:src="@drawable/patandmat2"
+            android:layout_marginVertical="20dp"/>
+
+        <TextView
+            android:id="@+id/list_title"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="  오늘의 알람"
+            android:textSize="25dp"
+            android:background="#D9D9D9"
+            app:layout_constraintTop_toBottomOf="@+id/pic"
+            android:paddingTop="15dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginVertical="5dp">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AM 10:08"
+                android:textSize="20dp"
+                android:layout_marginLeft="20dp"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="정상 작동"
+                android:textSize="20dp"
+                android:layout_marginLeft="50dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AM 11:23"
+                android:textSize="20dp"
+                android:layout_marginLeft="20dp"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="비정상 작동"
+                android:textSize="20dp"
+                android:textColor="@color/colorAccent"
+                android:layout_marginLeft="50dp"/>
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/t_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E8E8E8"
+            app:layout_constraintTop_toBottomOf="@+id/list_title">
+        </ListView>
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

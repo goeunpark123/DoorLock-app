@@ -9,6 +9,7 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".NetworkClientActivity"
     android:orientation="vertical"
+    android:background="#FFFFFF"
     android:alpha="88">
 
     <LinearLayout
@@ -84,7 +85,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="25dp"
             android:text="Sever:"
             android:textColor="#000000"
             android:textSize="30dp"
@@ -118,7 +119,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="10dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -142,12 +143,26 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:layout_marginTop="10dp"
         android:weightSum="1">
 
         <Button
             android:id="@+id/buttonServiceStart"
             android:text="Connection"
+            android:textSize="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:layout_marginTop="15dp"
+            android:gravity="center|center_vertical"
+            android:clickable="true"
+            style="@style/Button" />
+
+        <Button
+            android:id="@+id/buttonAlarmCheck"
+            android:onClick="clickButton"
+            android:text="미완성"
             android:textSize="30dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

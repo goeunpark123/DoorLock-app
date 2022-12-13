@@ -145,6 +145,11 @@ public class NetworkClientActivity extends AppCompatActivity {
         });
     }
 
+    public void clickButton(View v) {
+        Intent intent = new Intent(this, ShowPicActivity.class);
+        startActivity(intent);
+    }
+
     public void serverSel()
     {
         // Intent로 다른 Activity(AnotherActivity.class)를 실행시킬 때,
