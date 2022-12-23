@@ -11,6 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.LinearLayout;
+import android.widget.ListAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,11 +20,10 @@ import java.util.ArrayList;
 
 import static com.example.doorlockapp.ShowPicActivity.TAG;
 
-
-public class ListViewAdapter extends BaseAdapter {
+public class ListViewAdapter extends BaseAdapter implements ListAdapter {
 
     private TextView titleView;
-    private ArrayList<ListViewItem> ItemList = new ArrayList<ListViewItem>();
+    static ArrayList<ListViewItem> ItemList = new ArrayList<ListViewItem>();
 
     @Override
     public int getCount() {
@@ -76,4 +77,28 @@ public class ListViewAdapter extends BaseAdapter {
 
         ItemList.add(item);
     }
+
+    public static void setListViewHeightBasedOnChildren(ListView listview){
+        ListViewAdapter listAdapter = new ListViewAdapter();
+        listAdapter = (ListViewAdapter)listview.getAdapter();
+        if (listAdapter == null) {
+            // pre-condition
+            return;
+        }
+
+        int totalHeight = 0;
+
+        int desiredWidth = View.MeasureSpec.makeMeasureSpec(listview.getWidth(), View.MeasureSpec.AT_MOST);
+        for (int i = 0; i < listAdapter.getCount(); i++) {
+            View listItem = listAdapter.getView(i, null, listview);
+            //listItem.measure(0, 0);
+            listItem.measure(desiredWidth, View.MeasureSpec.UNSPECIFIED);
+            totalHeight += listItem.getMeasuredHeight();
+        }
+        ViewGroup.LayoutParams params = listview.getLayoutParams();
+
+        params.height = totalHeight;
+        listview.setLayoutParams(params);
+    }
 }
+

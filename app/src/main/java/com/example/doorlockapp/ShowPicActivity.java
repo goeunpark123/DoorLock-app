@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.util.Log;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -15,6 +17,8 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.ListResult;
 import com.google.firebase.storage.StorageReference;
+
+import static com.example.doorlockapp.ListViewAdapter.setListViewHeightBasedOnChildren;
 
 public class ShowPicActivity extends AppCompatActivity {
 
@@ -36,6 +40,7 @@ public class ShowPicActivity extends AppCompatActivity {
 
         listview = (ListView)findViewById(R.id.p_list);
         listview.setAdapter(adapter);
+        setListViewHeightBasedOnChildren(listview);
 
         final StorageReference storage = FirebaseStorage.getInstance().getReference();
         StorageReference pathReference = storage.child("photo");
