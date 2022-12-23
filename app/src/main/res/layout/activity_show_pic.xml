@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ShowPicActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -36,55 +37,18 @@
             app:layout_constraintTop_toBottomOf="@+id/pic"
             android:paddingTop="15dp"/>
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginVertical="5dp">
+            android:layout_height="280dp">
 
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="AM 10:08"
-                android:textSize="20dp"
-                android:layout_marginLeft="20dp"/>
+            <ListView
+                android:id="@+id/p_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#E8E8E8"
+                app:layout_constraintTop_toBottomOf="@+id/list_title"/>
 
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="정상 작동"
-                android:textSize="20dp"
-                android:layout_marginLeft="50dp"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="AM 11:23"
-                android:textSize="20dp"
-                android:layout_marginLeft="20dp"/>
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="비정상 작동"
-                android:textSize="20dp"
-                android:textColor="@color/colorAccent"
-                android:layout_marginLeft="50dp"/>
-        </LinearLayout>
-
-        <ListView
-            android:id="@+id/t_list"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#E8E8E8"
-            app:layout_constraintTop_toBottomOf="@+id/list_title">
-        </ListView>
+        </ScrollView>
 
     </LinearLayout>
 

@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ShowPicActivity"></activity>
+        <activity android:name=".ListViewAdapter"></activity>
+        <activity android:name=".ShowPicActivity" />
         <activity android:name=".NetManager" />
         <activity android:name=".ServerSetActivity" />
         <activity android:name=".NetworkClientActivity">

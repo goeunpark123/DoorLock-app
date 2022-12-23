@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "611460613242",
+    "project_id": "fir-doorlock-2ab8a",
+    "storage_bucket": "fir-doorlock-2ab8a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:611460613242:android:daa292af1441c44d80e7c3",
+        "android_client_info": {
+          "package_name": "com.example.doorlockapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "611460613242-9k0erkrdl53gus3joml2j97c9uo4135v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.doorlockapp",
+            "certificate_hash": "9d6a184549e11effcdb53282e20acf374b206830"
+          }
+        },
+        {
+          "client_id": "611460613242-g5ob406ovhgo8s26a17ecn0cilrlklv7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDslWI0QEbOcQwIb9nwFesRHJykv3QYd7g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "611460613242-g5ob406ovhgo8s26a17ecn0cilrlklv7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

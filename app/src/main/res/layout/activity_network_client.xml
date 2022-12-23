@@ -140,12 +140,30 @@
 
     </LinearLayout>
 
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </ScrollView>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginTop="10dp"
         android:weightSum="1">
+
+        <Button
+            android:id="@+id/buttonAlarmCheck"
+            android:onClick="clickButton"
+            android:text="INTRUDER!"
+            android:textSize="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:layout_marginTop="15dp"
+            android:gravity="center|center_vertical"
+            android:clickable="true"
+            style="@style/Button" />
 
         <Button
             android:id="@+id/buttonServiceStart"
@@ -159,18 +177,6 @@
             android:clickable="true"
             style="@style/Button" />
 
-        <Button
-            android:id="@+id/buttonAlarmCheck"
-            android:onClick="clickButton"
-            android:text="미완성"
-            android:textSize="30dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.2"
-            android:layout_marginTop="15dp"
-            android:gravity="center|center_vertical"
-            android:clickable="true"
-            style="@style/Button" />
     </LinearLayout>
 
 </LinearLayout>
